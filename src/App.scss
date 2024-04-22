@@ -1,0 +1,36 @@
+$boxHeight: 80px;
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .search-bar {
+        height: $boxHeight;
+    }
+
+    .pagination {
+        height: $boxHeight;
+    }
+
+    .image-list {
+        overflow-y: scroll;
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .image-card {
+            height: 300px;
+            border: 1px solid #e3e3e3;
+            padding: 10px;
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+                height: 80%;
+                object-fit: cover;
+            }
+        }
+    }
+}
